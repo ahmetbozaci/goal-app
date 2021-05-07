@@ -1,9 +1,11 @@
 <br>
 <div class="container">
-  <%= form_with model: @user, url: root_path do |f| %>
-  <div class="form-group">
-    <%= f.text_field :name, placeholder: 'Enter your name', class: 'form-control' %>
-  </div>
-  <%= f.submit 'Sign Up', class:'btn btn-primary' %>
+  <%= form_with model: @user, url: sign_up_path  do |f| %>
+    <div class="mb-3">
+      <%= f.text_field :name, placeholder: 'Enter your name', class: 'form-control' %>
+    </div>
+    <div>
+      <%= f.submit 'Sign Up', class:'btn btn-primary' %>
+    </div>
   <% end %>
 </div>

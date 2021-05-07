@@ -12,15 +12,14 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       render :new
+    end
   end
 
-  def show
-    @user = User.find_by(:id session[:user_id] if session[:user_id])
-  end
+
 
   private
 
   def user_params
-    param.require(:user).permit(:name)
+    params.require(:user).permit(:name)
   end
 end
