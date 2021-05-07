@@ -1,0 +1,9 @@
+<br>
+<div class="container">
+  <%= form_with model: @user, url: root_path do |f| %>
+  <div class="form-group">
+    <%= f.text_field :name, placeholder: 'Enter your name', class: 'form-control' %>
+  </div>
+  <%= f.submit 'Sign Up', class:'btn btn-primary' %>
+  <% end %>
+</div>
