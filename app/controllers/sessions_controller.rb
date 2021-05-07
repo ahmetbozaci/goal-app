@@ -1,13 +1,13 @@
 class SessionsController < ApplicationController
   def new; end
-
+  
   def create
-    user = User.find_by(id: session[:user_id])
+    user = User.find_by(name: params[:name])
     if user.present?
       session[:user_id] = user.id
-      flash[:notice] = 'Logged in successfully'
+      redirect_to root_path, notice: "Logged in successfully"
     else
-      flash[:alert] = 'Username is not correct'
+      flash[:alert] = "Username is not correct"
       render :new
     end
   end

@@ -1,0 +1,11 @@
+<h1>Sign In<h1>
+<div class="container">
+  <%= form_with  url: sign_in_path  do |f| %>
+    <div class="mb-3">
+      <%= f.text_field :name, placeholder: 'Enter your name', class: 'form-control' %>
+    </div>
+    <div>
+      <%= f.submit 'Sign In', class:'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>

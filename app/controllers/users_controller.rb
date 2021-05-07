@@ -5,17 +5,14 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
     if @user.save
       session[:user_id] = @user.id
       #flash[:notice] = "#{@user.name} is created successfully"
-      redirect_to root_path, notice: "Succesfully created"
+      redirect_to root_path, notice: "succesfully created"
     else
       render :new
     end
   end
-
-
 
   private
 
