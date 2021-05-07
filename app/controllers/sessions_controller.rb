@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-
+  def new
+  end
   def create
     user = User.find_by(id: session[:user_id])
     if user.present?
@@ -17,5 +18,5 @@ class SessionsController < ApplicationController
     flash[:notice] = 'Logged out'
     redirect_to root_path
   end
-  
+
 end
