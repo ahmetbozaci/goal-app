@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'groups/new'
   root 'home#index'
-  #resources :users
+  resources :groups
 
   get 'sign_up', to: 'users#new'
   post 'sign_up', to: 'users#create'
