@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :groups
 
+  get 'create_group', to: 'groups#new'
+  post 'create_group', to: 'groups#create'
+
   get 'sign_up', to: 'users#new'
   post 'sign_up', to: 'users#create'
 

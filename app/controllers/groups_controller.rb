@@ -2,7 +2,11 @@ class GroupsController < ApplicationController
   def index
     @group = Groups.all
   end
-
+  
+  def new
+    @group = Group.new
+  end
+  
   def show
     @group = Group.find(params[:id])
   end
@@ -10,8 +14,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     if @group.save
-      flash[:notice] = "Group created successfully"
-      redirect_to root_path
+      redirect_to root_path, notice: "Group created successfully"
     else
       render :new
     end

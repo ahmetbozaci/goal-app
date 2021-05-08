@@ -1,0 +1,16 @@
+<h1>Create Group<h1>
+<div class="container">
+  <%= form_with model: @group, url: create_group_path  do |f| %>
+ 
+
+    <div class="mb-3">
+      <%= f.text_field :name, placeholder: 'Enter your  group name', class: 'form-control' %>
+    </div>
+     <div class="mb-3">
+      <%= f.text_field :icon, placeholder: 'Enter your  icon ', class: 'form-control' %>
+    </div>
+    <div>
+      <%= f.submit  class:'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
