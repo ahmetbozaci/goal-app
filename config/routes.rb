@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'groups/new'
   root 'home#index'
   resources :groups
+  
 
   get 'create_group', to: 'groups#new'
   post 'create_group', to: 'groups#create'

@@ -1,8 +1,5 @@
-<h1>Create Group<h1>
 <div class="container">
-  <%= form_with model: @group, url: create_group_path  do |f| %>
- 
-
+  <%= form_with model: @group  do |f| %>
     <div class="mb-3">
       <%= f.text_field :name, placeholder: 'Enter your  group name', class: 'form-control' %>
     </div>

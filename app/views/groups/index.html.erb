@@ -1,16 +1,14 @@
 
 <h1>Groups</h1>
- 
+  Group numbers : <%= Group.count %>
 <ul>
   <% @groups.each do |group| %>
-   
-      <li>
-        <%= link_to group.name, group %>
-      </li>
-   <li>
-        <%= link_to group.icon, group %>
-      </li>
-  <% end %>
+    <li> Group name:
+      <%= link_to group.name, group %>
+      icon:
+      <%= group.icon %>
+    </li>
+<% end %>
 </ul>
 
 <%= link_to "New Group", create_group_path %>
