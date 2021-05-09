@@ -5,9 +5,10 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:name])
     if user.present?
       session[:user_id] = user.id
-      redirect_to root_path, notice: "Logged in successfully"
+      flash[:notice] = "Logged in successfully"
+      redirect_to root_path
     else
-      flash[:alert] = "Username is not correct"
+      flash[:alert] = 'Invalid credential'
       render :new
     end
   end
