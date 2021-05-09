@@ -1,10 +1,12 @@
 class GroupsController < ApplicationController
+  before_action :logged_in?
   def index
     @groups = Group.all
   end
   
   def new
-    @group = Group.new
+    @group = current_user.groups.build
+    #@group = Group.new
   end
   
   def show
@@ -12,7 +14,8 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(group_params)
+    @group = current_user.groups.build(group_params)
+    #@group = Group.new(group_params)
     if @group.save
       redirect_to @group, notice: "Group created successfully"
     else
@@ -41,6 +44,6 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    params.require(:group).permit(:name, :icon)
+    params.require(:group).permit(:name, :icon, :user_id)
   end
 end
