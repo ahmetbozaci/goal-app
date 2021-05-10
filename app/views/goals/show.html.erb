@@ -10,5 +10,9 @@
   <%= @goal.amount %>
 </p>
 
+<p>
+  <strong>User_id:</strong>
+  <%= current_user %>
+</p>
 <%= link_to 'Edit', edit_goal_path(@goal) %> |
 <%= link_to 'Back', goals_path %>

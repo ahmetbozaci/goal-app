@@ -12,7 +12,8 @@ class GoalsController < ApplicationController
 
   # GET /goals/new
   def new
-    @goal = Goal.new
+    # @goal = Goal.new
+    @goal = current_user.goals.build
   end
 
   # GET /goals/1/edit
@@ -21,7 +22,7 @@ class GoalsController < ApplicationController
 
   # POST /goals or /goals.json
   def create
-    @goal = Goal.new(goal_params)
+    @goal = current_user.goals.build(goal_params)
 
     respond_to do |format|
       if @goal.save
@@ -64,6 +65,6 @@ class GoalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def goal_params
-      params.require(:goal).permit(:name, :amount)
+      params.require(:goal).permit(:name, :amount, :user_id)
     end
 end
