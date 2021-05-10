@@ -1,12 +1,11 @@
 class GroupsController < ApplicationController
-  before_action :logged_in?
+  # before_action :logged_in?
   def index
     @groups = Group.all
   end
   
   def new
     @group = current_user.groups.build
-    #@group = Group.new
   end
   
   def show
@@ -15,7 +14,6 @@ class GroupsController < ApplicationController
 
   def create
     @group = current_user.groups.build(group_params)
-    #@group = Group.new(group_params)
     if @group.save
       redirect_to @group, notice: "Group created successfully"
     else
