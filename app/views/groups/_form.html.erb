@@ -1,11 +1,13 @@
 <div class="container">
-  <h3> Create New Group </h3>
   <%= form_with model: @group  do |f| %>
     <div class="mb-3">
-      <%= f.text_field :name, placeholder: 'Enter your  group name', class: 'form-control' %>
+      <%= f.text_field :name, placeholder: 'Enter group name', class: 'form-control' %>
     </div>
      <div class="mb-3">
-      <%= f.text_field :icon, placeholder: 'Enter your  icon ', class: 'form-control' %>
+      <%= f.label "Group Icon: ", class:"" %>
+      <%= f.select :icon, ["&#xf015".html_safe,"&#xf07a".html_safe,"&#xf1b9".html_safe,
+                           "&#xf0fa".html_safe,"&#xf21e".html_safe,"&#xf005".html_safe], 
+                           class: 'form-select', selected:"&#xf005".html_safe %>
     </div>
     <div>
       <%= f.submit  class:'btn btn-primary' %>

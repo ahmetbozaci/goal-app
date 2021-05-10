@@ -1,5 +1,7 @@
+@import url("http://fontawesome.io/assets/font-awesome/css/font-awesome.css");
+select, p{ font-family: 'FontAwesome', Verdana }
 
- nav {
+nav {
   background-color: #3778c2;
 }
 
@@ -13,3 +15,4 @@ a:hover { color: white;}
   background-color: #3778c2;
 }
 .navbar-text { color: white} 
+
