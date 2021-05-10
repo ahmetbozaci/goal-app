@@ -1,3 +1,5 @@
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Goals</h1>
@@ -13,13 +15,16 @@
 
   <tbody>
     <% @goals.each do |goal| %>
+      <% if goal.user_id == Current.user.id%>
       <tr>
+        <td><%= goal.user_id %></td>
         <td><%= goal.name %></td>
         <td><%= goal.amount %></td>
         <td><%= link_to 'Show', goal %></td>
         <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
         <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
