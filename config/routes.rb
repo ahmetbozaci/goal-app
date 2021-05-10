@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :goals
   get 'groups/new'
   root 'home#index'
   resources :groups

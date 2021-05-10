@@ -1,0 +1,27 @@
+<%= form_with(model: goal) do |form| %>
+  <% if goal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
+
+      <ul>
+        <% goal.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
