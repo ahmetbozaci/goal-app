@@ -14,8 +14,6 @@ RSpec.describe Group, type: 'model' do
     # it 'has many goals' do
     #   expect(@group).to respond_to(:goals)
     # end
-
- 
   end
 
   it 'name should not be empty' do

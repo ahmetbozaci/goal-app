@@ -1,7 +1,7 @@
-require "test_helper"
+require 'test_helper'
 
 class GroupsControllerTest < ActionDispatch::IntegrationTest
-  test "should get new" do
+  test 'should get new' do
     get groups_new_url
     assert_response :success
   end

@@ -3,11 +3,11 @@ class GroupsController < ApplicationController
   def index
     @groups = Group.all
   end
-  
+
   def new
     @group = current_user.groups.build
   end
-  
+
   def show
     @group = Group.find(params[:id])
   end
@@ -15,12 +15,12 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.build(group_params)
     if @group.save
-      redirect_to @group, notice: "Group created successfully"
+      redirect_to @group, notice: 'Group created successfully'
     else
       render :new
     end
   end
-  
+
   def edit
     @group = Group.find(params[:id])
   end
@@ -33,7 +33,7 @@ class GroupsController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
     @group = Group.find(params[:id])
     @group.destroy
@@ -41,6 +41,7 @@ class GroupsController < ApplicationController
   end
 
   private
+
   def group_params
     params.require(:group).permit(:name, :icon, :user_id)
   end
