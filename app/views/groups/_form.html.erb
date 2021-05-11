@@ -1,10 +1,17 @@
 <div class="container">
   <%= form_with model: @group  do |f| %>
+      <% if @group.errors.any? %>
+      <div class="alert alert-danger">
+        <% @group.errors.full_messages.each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+    <% end %>
     <div class="mb-3">
       <%= f.text_field :name, placeholder: 'Enter group name', class: 'form-control' %>
     </div>
      <div class="mb-3">
-      <%= f.label "Group Icon: ", class:"" %>
+      <%= f.label "Group Icon: ", class:"form-label" %>
       <%= f.select :icon, ["&#xf015".html_safe,"&#xf07a".html_safe,"&#xf1b9".html_safe,
                            "&#xf0fa".html_safe,"&#xf21e".html_safe,"&#xf005".html_safe], 
                            class: 'form-select', selected:"&#xf005".html_safe %>
