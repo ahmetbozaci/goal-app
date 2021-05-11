@@ -1,5 +1,6 @@
 @import url("http://fontawesome.io/assets/font-awesome/css/font-awesome.css");
-select, p{ font-family: 'FontAwesome', Verdana }
+select, i{ font-family: 'FontAwesome', Verdana;
+           font-style: normal }
 
 nav {
   background-color: #3778c2;

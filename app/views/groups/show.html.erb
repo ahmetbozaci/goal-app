@@ -1,12 +1,12 @@
 
-<h1><%= @group.name %></h1>
-<p><%= @group.icon %></p>
+<h3><i><%= @group.icon %> </i><%= @group.name %></h3>
+<p></p>
 
-<ul>
-  <li><%= link_to "Edit", edit_group_path %></li>
-  <li><%= link_to "Delete", group_path, 
+
+  <%= link_to "Edit", edit_group_path, class:"btn" %>
+  <%= link_to "Delete", group_path,
                   method: :delete,
-                  data: { confirm: "Are you sure?" }%></li>
-</ul>
+                  data: { confirm: "Are you sure?" }, class:"btn" %>
+
 
 
