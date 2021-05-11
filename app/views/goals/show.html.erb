@@ -15,5 +15,6 @@
   <strong>User_id:</strong>
 
 </p>
-<%= link_to 'Edit', edit_goal_path(@goal) %> |
+<%= link_to 'Edit', edit_goal_path(@goal) %> 
 <%= link_to 'Back', goals_path %>
+<%= link_to 'Destroy', @goal, method: :delete, data: { confirm: 'Are you sure?' } %>

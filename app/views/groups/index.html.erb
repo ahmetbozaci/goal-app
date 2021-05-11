@@ -1,13 +1,13 @@
-
-<h3>Groups</h3>
-<p>Group count : <%= Group.count %></p>
-<ul>
-  <% @groups.each do |group| %>
-    <li>
-      <i><%= group.icon %></i>
-      <%= link_to group.name, group %>
-    </li>
-<% end %>
-</ul>
-
-<%= button_to "Create Group", create_group_path, class:"btn" %>
+<div class="container">
+  <h3>Groups</h3>
+  <p>Group count : <%= Group.count %></p>
+  <ul>
+    <% @groups.each do |group| %>
+      <li>
+        <i><%= group.icon %></i>
+        <%= link_to group.name, group %>
+      </li>
+  <% end %>
+  </ul>
+  <%= link_to "Create Group", create_group_path, class:"btn" %>
+</div>
