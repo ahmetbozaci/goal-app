@@ -10,10 +10,15 @@ nav {
 color:white;
 
 }
-a:hover { color: white;}
+a:hover { color: black;
+          text-decoration-line: none;}
 
 .btn {
   background-color: #3778c2;
+  color:white
 }
 .navbar-text { color: white} 
 
+li {
+  list-style-type: none;
+}
