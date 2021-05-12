@@ -1,23 +1,30 @@
 @import url("http://fontawesome.io/assets/font-awesome/css/font-awesome.css");
-select, i{ font-family: 'FontAwesome', Verdana;
-           font-style: normal }
+
+select,
+i {
+  font-family: 'FontAwesome', Verdana, Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
 
 nav {
   background-color: #3778c2;
 }
 
-.nav-link, .navbar-brand {
-color:white;
-
+.nav-link,
+.navbar-brand {
+  color: white;
 }
-a:hover { color: black;
-          text-decoration-line: none;}
+
+a:hover {
+  color: black;
+  text-decoration-line: none;
+}
 
 .btn {
   background-color: #3778c2;
-  color:white
+  color: white;
 }
-.navbar-text { color: white} 
+.navbar-text { color: white; }
 
 li {
   list-style-type: none;
