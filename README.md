@@ -31,15 +31,15 @@ This project was built using Ruby and Rails version 6, it is a web application a
 
 + Clone the project using this command.
 
+
+> Using SSH 
 ```
-Using SSH 
+git clone  https://github.com/ahmetbozaci/goal-app.git
+```
 
-# git clone  https://github.com/ahmetbozaci/goal-app.git
-
-Using HTTPS
-
-# git clone  git@github.com:ahmetbozaci/goal-app.git
-
+> Using HTTPS
+```
+git clone  git@github.com:ahmetbozaci/goal-app.git
 ```
 
 + Change to the parent directory of the project using 
@@ -50,36 +50,36 @@ cd /home/workspace/Project-name
 
 ## Install
 
-+ Install the needed gems:
+>  Install the needed gems:
 
 ```
-# bundle install --without production
+bundle install --without production
 ```
 
-+ Migrate the database:
+>  Migrate the database:
 
 ```
-# rails db:migrate
+rails db:migrate
 ```
 
-+ Install webpacker
+>  Install webpacker
 
 ```
-# rails webpacker:install
+rails webpacker:install
 ```
 
 ### Run tests
 
-+ Run the test suite to verify that everything is working correctly:
+>  Run the test suite to verify that everything is working correctly:
 
 ```
-# bundle exec rspec
+bundle exec rspec
 ```
 
-+ If the test suite passes, you'll be ready to run the app in a local server:
+>  If the test suite passes, you'll be ready to run the app in a local server:
 
 ```
-$ rails server
+rails server
 ```
 
 ## Authors
