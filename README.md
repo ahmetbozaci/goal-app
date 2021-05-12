@@ -4,7 +4,7 @@
 
 Group App is a web application with responsive behavior for mobile usage built with <b>Ruby on Rails</b> 
 <!-- this application is based on an app for grouping payments by a goal with your family/friends --> 
-you can find the full requirements <a href="https://www.notion.so/microverse/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce" alt="Requirements">here</a>. Exploring this project you can find these options (<b>login</b>, <b> sign-in</b>,<b> all my goals</b>,<b> all my external goals</b>,<b> all groups and log out</b>) 
+you can find the full requirements <a href="https://www.notion.so/microverse/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce" alt="Requirements">here</a>. Exploring this project you can find these options (<b>sign-up</b>, <b> sign-in</b>,<b> all my goals</b>,<b> all my external goals</b>,<b> all groups and log out</b>) 
 
 <!-- <b> check out a wish list as an additional feature</b> --> 
 
@@ -53,7 +53,7 @@ cd /home/workspace/Project-name
 + Install the needed gems:
 
 ```
-# bundle inst
+# bundle install --without production
 ```
 
 + Migrate the database:
