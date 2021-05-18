@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :groups
   
-
+  get 'reversed_goals', to:'goals#index_reversed'
+  
   get 'create_group', to: 'groups#new'
   post 'create_group', to: 'groups#create'
 

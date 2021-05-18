@@ -5,6 +5,11 @@ class GoalsController < ApplicationController
   def index
     @goals = Goal.all
   end
+  
+  def index_reversed
+    @goals = Goal.all.reverse_order
+  end
+ 
 
   # GET /goals/1 or /goals/1.json
   def show; end
