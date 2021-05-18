@@ -26,6 +26,7 @@
       <tr scope="row">
         <td><%=link_to goal.name, goal %></td>
         <td><%= goal.amount %>$</td>
+         <td><%= goal.created_at.strftime("%d %b %Y") %></td>
         <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% end %>

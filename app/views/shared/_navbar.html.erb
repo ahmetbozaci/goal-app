@@ -1,37 +1,38 @@
-<nav class="navbar navbar-expand-lg m-3">
-  <div class="container-fluid">
+<nav class="navbar  m-3 navbar-expand-md navbar-light">
     <%= link_to "Goal App", root_path, class:"navbar-brand" %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto  mb-2 mb-lg-0">
-       <% if Current.user %>
 
-       <li class="nav-item">
-          <%= link_to "My Goals", root_path,  class:"nav-link" %> 
-        </li>
-        <li class="nav-item">
-          <%= link_to "My External Goals", goals_path,  class:"nav-link" %> 
-        </li>
-        <li class="nav-item">
-          <%= link_to "All Groups ", groups_path, class:"nav-link" %> 
-        </li>
-        <li class="nav-item mr-2">
-          <span class="navbar-text"><%= Current.user.name %></span>
-        </li>
-        <li class="nav-item">
-          <%= button_to "Log Out", logout_path, method: :delete, class:"btn" %> 
-        </li>
-    <% else %>
-        <li class="nav-item">
-          <%= link_to "Sign In", sign_in_path, class:"nav-link" %> 
-        </li>
-        <li class="nav-item">
-          <%= link_to "Sign Up", sign_up_path, class:"nav-link" %> 
-        </li>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <% if Current.user %>
+          <li class="nav-item">
+            <%= link_to "My Goals", root_path,  class:"nav-link" %> 
+          </li>
+          <li class="nav-item">
+            <%= link_to "My External Goals", goals_path,  class:"nav-link" %> 
+          </li>
+          <li class="nav-item">
+            <%= link_to "All Groups ", groups_path, class:"nav-link" %> 
+          </li>
+          <li class="nav-item mr-2">
+            <span class="navbar-text"><%= Current.user.name %></span>
+          </li>
       </ul>
-     <% end %>
+
+      <ul class="navbar-nav ml-auto  mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= button_to "Log Out", logout_path, method: :delete, class:"btn nav-item" %> 
+        </li>
+        <% else %>
+      <li class="nav-item">
+      <%= link_to "Sign In", sign_in_path, class:"nav-link nav-item" %> 
+      </li>
+      <li class="nav-item">
+      <%= link_to "Sign Up", sign_up_path, class:"nav-link" %> 
+      </li>
+      </ul>
+      <% end %>
     </div>
-  </div>
 </nav>
