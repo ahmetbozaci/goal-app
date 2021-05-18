@@ -6,7 +6,7 @@ class GoalsController < ApplicationController
     @goals = Goal.all
   end
   
-  def index_reversed
+  def index_recent
     @goals = Goal.all.reverse_order
   end
  
