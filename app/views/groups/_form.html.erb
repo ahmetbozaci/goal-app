@@ -1,3 +1,4 @@
+<br>
 <div class="container">
   <%= form_with model: @group  do |f| %>
       <% if @group.errors.any? %>
@@ -7,6 +8,7 @@
         <% end %>
       </div>
     <% end %>
+    
     <div class="mb-3">
       <%= f.text_field :name, placeholder: 'Enter group name', class: 'form-control' %>
     </div>
