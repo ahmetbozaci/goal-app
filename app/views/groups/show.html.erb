@@ -1,11 +1,24 @@
+
+
 <br>
 <div class="container">
-<h3><i><%= @group.icon %> </i><%= @group.name %></h3>
-<p></p>
-<%= link_to "Edit", edit_group_path, class:"btn" %>
-<%= link_to "Delete", group_path,
-                method: :delete,
-                data: { confirm: "Are you sure?" }, class:"btn" %>
+  <div class="card">
+    <div class="card-body d-flex py-2">
+      <div class="pr-5 my-auto">
+          <i><%=  @group.icon %></i>
+        </div>
+       <div class="mx-auto ml-auto">
+          <p class="mb-0"><%= @group.name %></p>
+          <span class="date"><%= @group.created_at.strftime("%d %b %Y, %I:%M:%S")%></span>
+        </div>
+       <div class="my-auto ml-auto ">
+              <%= link_to 'Edit', edit_group_path(@group), class:"btn" %> 
+    <%= link_to 'Delete', @group, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn" %>
 
+        </div>
+    </div>
+  
+    </div>
+    <br>
 
 </div>
