@@ -1,13 +1,25 @@
 <div class="container">
-  <h3>Groups</h3>
-  <p>Group count : <%= Group.count %></p>
-  <ul>
-    <% @groups.each do |group| %>
-      <li>
-        <i><%= group.icon %></i>
-        <%= link_to group.name, group %>
-      </li>
+  <div class="card">
+    <div class="card-body">Group count : <%= Group.count %></div>
+  </div>
+  <br>
+  <% @groups.each do |group| %>
+    <div class="card">
+      <div class="card-body d-flex">
+        <div class="pr-5 my-auto">
+          <i><%= group.icon %></i>
+        </div>
+        <div class="mx-auto">
+          <p><%= link_to group.name, group, class:"model-name" %></p>
+          <span class="date"><%= group.created_at.strftime("%d %b %Y, %I:%M:%S")%></span>
+        </div>
+        <div class="my-auto ml-auto ">
+          <%= User.find_by_id(group.user_id).name %>
+        </div>
+
+      </div>
+    </div>
+  <br>
   <% end %>
-  </ul>
   <%= link_to "Create Group", create_group_path, class:"btn" %>
 </div>

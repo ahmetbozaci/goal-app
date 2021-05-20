@@ -29,3 +29,15 @@ a:hover {
 li {
   list-style-type: none;
 }
+body {
+  background-color: #F1F3F2;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #868383;
+}
+
+.model-name {
+  color: #434b54;
+}
