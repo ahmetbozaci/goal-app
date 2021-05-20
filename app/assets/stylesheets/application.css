@@ -40,9 +40,11 @@ body {
 
 
 .link-color{
-  color: #434b54;
- 
+  color: #434b54; 
 }
 
-
-
+.brand {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 100;
+  font-size: 2rem;
+}
