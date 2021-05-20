@@ -1,41 +1,47 @@
-<div class="container">
 
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="card total mb-2">
+    <div class="card-body d-flex my-auto">
+      <p class="mb-0"> Total amount </p>
+      <p class="ml-auto mb-0">$<%= totalAmount %></p>
+    </div>
+  </div>
+<div class="container">
+  <% @goals.each do |goal| %>
+    <% if goal.user_id == Current.user.id%>
+    <div class="card my-2">
+      <div class="card-body d-flex py-2">
+        <div class="pr-5 my-auto">
+          <i><%= goal.name %></i>
+        </div>
+        <div class="mx-auto">
+          <p class="mb-0"><%= link_to goal.name, goal, class:"link-color"%></p>
+          <span class="date"><%= goal.created_at.strftime("%d %b %Y, %I:%M:%S")%></span>
+        </div>
+        <div class="my-auto ml-auto ">
+          <%= goal.amount %>$
+        </div>
+
+      </div>
+    </div>
+   
+  <% end %>
+  <% end %>
+  <%= link_to "Create Goal", new_goal_path, class:"btn" %>
+  </div>
+</div>
+
+
+
+
 
 <div class="jumbotron">
-<p> Total amount: <%= totalAmount %>$ </p>
  <p> <%= link_to "Most recent", recent_goals_path   %> </p>
   <p> <%= link_to "Most ancient ", goals_path %></p>
 </p>
 </div>
-<h1>Goals</h1>
 
-<table class="table">
-  
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Amount</th>
-      <th scope="col" colspan="3"></th>
-    </tr> 
-  </thead>
 
-  <tbody>
-    <% @goals.each do |goal| %>
-      <% if goal.user_id == Current.user.id%>
-      <tr scope="row">
-        <td><%=link_to goal.name, goal %></td>
-        <td><%= goal.amount %>$</td>
-         <td><%= goal.created_at.strftime("%d %b %Y") %></td>
-        <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-      <% end %>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'Create Goal', new_goal_path ,class:"btn"%>
  
 </div>
