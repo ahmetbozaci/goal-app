@@ -1,12 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  config.after_initialize do
-    Bullet.enable = true
-    Bullet.alert = ENV['BULLET_ALERTS']
-  
-   
-  end
+
   
 
   # Settings specified here will take precedence over those in config/application.rb.
@@ -14,7 +9,7 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
-  config.cache_classes = true
+  config.cache_classes = false
 
   # Do not eager load code on boot.
   config.eager_load = false

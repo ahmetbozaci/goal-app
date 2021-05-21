@@ -20,9 +20,9 @@ end
 group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
-  gem 'sqlite3', '~> 1.4'
+  gem 'pg', '~> 1.2', '>= 1.2.3'
   gem 'web-console', '>= 4.1.0'
-  gem 'bullet'
+ 
 end
 
 group :production do
