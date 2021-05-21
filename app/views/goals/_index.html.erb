@@ -12,7 +12,7 @@
     </div>
   </div>
 <div class="container">
-  <% @goals.each do |goal| %>
+  <% @goals.includes(:user).each do |goal| %>
     <% if goal.user_id == Current.user.id%>
     <div class="card my-2">
       <div class="card-body d-flex py-2">
