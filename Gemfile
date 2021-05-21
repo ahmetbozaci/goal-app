@@ -20,14 +20,13 @@ end
 
 group :development do
   gem 'listen', '~> 3.3'
-  gem 'spring'
   gem 'pg'
+  gem 'spring'
   gem 'web-console', '>= 4.1.0'
- 
 end
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
 end
 
 group :test do

@@ -3,11 +3,11 @@ class GoalsController < ApplicationController
 
   # GET /goals or /goals.json
   def index
-    @goals = Goal.all
+    @goals = Goal.all.order(created_at: :desc)
   end
 
-  def index_recent
-    @goals = Goal.all.reverse_order
+  def index_ancient
+    @goals = Goal.all
   end
 
   # GET /goals/1 or /goals/1.json
