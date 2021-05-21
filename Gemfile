@@ -15,18 +15,19 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'sqlite3'
 end
 
 group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
-  gem 'pg', '~> 1.2', '>= 1.2.3'
+  gem 'pg'
   gem 'web-console', '>= 4.1.0'
  
 end
 
 group :production do
-  gem 'pg', '~> 1.2', '>= 1.2.3'
+  gem 'pg'
 end
 
 group :test do
