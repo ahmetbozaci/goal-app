@@ -1,10 +1,8 @@
-<div class="jumbotron">
- <p> <%= link_to "Most ancient", ancient_goals_path   %> </p>
-  <p> <%= link_to "Most recent ", goals_path %></p>
-</p>
-</div>
 
-<div class="container">
+<div class="d-flex order mb-0">
+  <p class="ml-auto m-2"> <%= link_to "Most ancient", ancient_goals_path, class:"text-white" %> </p>
+  <p class="m-2 px-3"> <%= link_to "Most recent ", goals_path, class:"text-white" %></p>
+</div>
   <div class="card total mb-2">
     <div class="card-body d-flex my-auto">
       <p class="mb-0"> Total amount </p>
@@ -34,7 +32,6 @@
   <% end %>
   <%= link_to "Create Goal", new_goal_path, class:"btn" %>
   </div>
-</div>
 
 
 
