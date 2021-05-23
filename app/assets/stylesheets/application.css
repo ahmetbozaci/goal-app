@@ -29,8 +29,9 @@ a:hover {
 li {
   list-style-type: none;
 }
+
 body {
-  background-color: #F1F3F2;
+  background-color: #f1f3f2;
 }
 
 .date {
@@ -38,9 +39,8 @@ body {
   color: #868383;
 }
 
-
-.link-color{
-  color: #434b54; 
+.link-color {
+  color: #434b54;
 }
 
 .brand {
