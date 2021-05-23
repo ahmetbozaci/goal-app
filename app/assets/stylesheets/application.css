@@ -6,7 +6,8 @@ i {
   font-style: normal;
 }
 
-nav {
+nav,
+.order {
   background-color: #3778c2;
 }
 
@@ -29,8 +30,9 @@ a:hover {
 li {
   list-style-type: none;
 }
+
 body {
-  background-color: #F1F3F2;
+  background-color: #f1f3f2;
 }
 
 .date {
@@ -38,17 +40,12 @@ body {
   color: #868383;
 }
 
-
-.link-color{
-  color:  #434b54; 
+.link-color {
+  color: #434b54;
 }
 
 .brand {
   font-family: 'Dancing Script', cursive;
   font-weight: 100;
   font-size: 2rem;
-}
-.order {
-  background-color: #3778c2;
-  text-color: white
 }
