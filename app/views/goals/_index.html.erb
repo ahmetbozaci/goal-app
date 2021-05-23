@@ -11,11 +11,11 @@
   </div>
 <div class="container">
   <% @goals.includes(:user).each do |goal| %>
-    <% if goal.user_id == Current.user.id%>
+    <% if goal.user_id == Current.user.id && goal.group_id == 0 %>
     <div class="card my-2">
       <div class="card-body d-flex py-2">
         <div class="pr-5 my-auto">
-          <i><%= goal.name %></i>
+          <i><%= "&#xf005 no group".html_safe %></i>
         </div>
         <div class="mx-auto">
           <p class="mb-0"><%= link_to goal.name, goal, class:"link-color"%></p>
