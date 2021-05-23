@@ -20,8 +20,15 @@
     <%= form.number_field :amount, placeholder:"Enter amount", class:"form-control" %>
   </div>
 
+  <div class="field mb-3">
+    <%= form.label "Choose Group Number:", class:"form-label" %>
+    <%= form.select :group_id, groupid.map { |value| [ value, value ] }, class:"form-control" %>
+    <%= link_to "Groups Number", groups_path %>
+  </div>
+
   <div class="actions">
     <%= form.submit class:"btn btn-primary" %>
   </div>
 <% end %>
 </div>
+

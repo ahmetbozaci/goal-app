@@ -3,11 +3,15 @@ class GoalsController < ApplicationController
 
   # GET /goals or /goals.json
   def index
+    @goals = Goal.all.order(created_at: :desc)
+  end
+
+  def index_ancient
     @goals = Goal.all
   end
 
-  def index_recent
-    @goals = Goal.all.reverse_order
+  def all_goal
+    @goals = Goal.all
   end
 
   # GET /goals/1 or /goals/1.json
@@ -68,6 +72,6 @@ class GoalsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def goal_params
-    params.require(:goal).permit(:name, :amount, :user_id)
+    params.require(:goal).permit(:name, :amount, :user_id, :group_id)
   end
 end

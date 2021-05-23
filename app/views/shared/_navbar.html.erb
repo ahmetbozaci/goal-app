@@ -1,5 +1,5 @@
  <% if Current.user %>
-<nav class="navbar  mx-3 mt-3  mb-0 navbar-expand-md navbar-light">
+<nav class="navbar   mt-3  mb-0 navbar-expand-md navbar-dark">
     <%= link_to "GoalApp", root_path, class:"navbar-brand brand" %>
    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
@@ -9,7 +9,7 @@
        
         <ul class="navbar-nav">
           <li class="nav-item">
-            <%= link_to "My Goals", root_path,  class:"nav-link" %> 
+            <%= link_to "My Goals", all_goal_path,  class:"nav-link" %> 
           </li>
           <li class="nav-item">
             <%= link_to "My External Goals", goals_path,  class:"nav-link" %> 
@@ -23,8 +23,8 @@
          <li class="nav-item ">
             <span class="navbar-text"><%= Current.user.name %></span>
           </li>
-        <li class="nav-item">
-          <%= button_to "Log Out", logout_path, method: :delete, class:"btn nav-item" %> 
+        <li class="nav-item navbar-text px-2">
+          <%= link_to "Log Out", logout_path, method: :delete %> 
         </li>
       </ul>
     </div>
@@ -32,7 +32,7 @@
 <% else %>
 <div class="text-center">
 <br>
-  <h1 class="brand py-5">das</h1>
+  <h1 class="brand py-5">GoalApp</h1>
   <p><%= link_to "Log In", sign_in_path, class:"btn btn-primary px-5" %></p>
   <p><%= link_to "Sign Up", sign_up_path, class:"px-5 text-muted" %></p>
 <div>

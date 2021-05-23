@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       flash[:notice] = 'Logged in successfully'
       redirect_to root_path
     else
-      flash[:alert] = 'Invalid credential'
+      flash[:alert] = 'User not found'
       render :new
     end
   end

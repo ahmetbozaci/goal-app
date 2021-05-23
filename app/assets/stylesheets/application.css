@@ -6,7 +6,8 @@ i {
   font-style: normal;
 }
 
-nav {
+nav,
+.order {
   background-color: #3778c2;
 }
 
@@ -21,7 +22,7 @@ a:hover {
 }
 
 .btn {
-  background-color: #3778c2;
+  background-color: #5fb523;
   color: white;
 }
 .navbar-text { color: white; }
