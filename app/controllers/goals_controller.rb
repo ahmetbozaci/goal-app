@@ -13,6 +13,7 @@ class GoalsController < ApplicationController
   def all_goal
     @goals = Goal.all
   end
+
   # GET /goals/1 or /goals/1.json
   def show; end
 
