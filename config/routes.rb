@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :groups
   
+  get 'all_goal', to: 'goals#all_goal'
   get 'ancient_goals', to:'goals#index_ancient'
   
   get 'create_group', to: 'groups#new'

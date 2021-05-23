@@ -6,4 +6,12 @@ module GoalsHelper
     end
     total
   end
+
+  def total_amount_external
+    total = 0
+    @goals.each do |goal|
+      total += goal.amount if goal.user_id == Current.user.id && goal.group_id == 0
+    end
+    total
+  end
 end

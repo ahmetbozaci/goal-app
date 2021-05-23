@@ -8,11 +8,11 @@
           <i><%= group.icon %></i>
         </div>
         <div class="mx-auto">
-          <p class="mb-0"><%= link_to group.name, group, class:"link-color" %></p>
+          <p class="mb-0"><%= group.id%> - <%= link_to group.name, group, class:"link-color" %></p>
           <span class="date"><%= group.created_at.strftime("%d %b %Y, %I:%M:%S")%></span>
         </div>
         <div class="my-auto ml-auto ">
-          <%= group.user.name%>
+          <%= group.user.name%>   
         </div>
 
       </div>
