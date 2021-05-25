@@ -9,7 +9,9 @@ Goal App is a web application with responsive behavior for mobile usage built wi
 
 You can find the full requirements <a href="https://www.notion.so/microverse/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce" alt="Requirements">here</a>. Exploring this project you can find these options (<b>sign-up</b>, <b> sign-in</b>,<b> all my goals</b>,<b> all my external goals</b>,<b> all groups and log out</b>) 
 
+## Presentation
 
+Click on the link to see [presentation](https://www.loom.com/share/66dfcf1f0a4b46a392538a903abef954)
 
 ## Live Version
 
