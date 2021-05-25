@@ -2,20 +2,18 @@
     <h1 align="center"> Goal App  </h1>    
 </p>
 
+![screenshot](./docs/screenshot-1.png)
+![screenshot](./docs/screenshot-2.png)
+![screenshot](./docs/screenshot-3.png)
 Goal App is a web application with responsive behavior for mobile usage built with <b>Ruby on Rails</b> 
-<!-- this application is based on an app for grouping payments by a goal with your family/friends --> 
-you can find the full requirements <a href="https://www.notion.so/microverse/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce" alt="Requirements">here</a>. Exploring this project you can find these options (<b>sign-up</b>, <b> sign-in</b>,<b> all my goals</b>,<b> all my external goals</b>,<b> all groups and log out</b>) 
 
-<!-- <b> check out a wish list as an additional feature</b> --> 
+You can find the full requirements <a href="https://www.notion.so/microverse/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce" alt="Requirements">here</a>. Exploring this project you can find these options (<b>sign-up</b>, <b> sign-in</b>,<b> all my goals</b>,<b> all my external goals</b>,<b> all groups and log out</b>) 
 
-<!--
-It is required to sing in before to start using this application, Goal App is related with an online store where you buy some products, sometimes you just want to save some product that you want to review later, this is the basic idea about group our wishlist, <b> you can save a product wish</b>, groups allow you to separate your list of wish with a specific category. 
-When you don't want to associate with any category you can create a wishlist that will be not associated with any group or category, finally check out is the extra feature added to be able to proceed with the check out for any of the products you saved.
--->
+
 
 ## Live Version
 
-Click on the link to see  [live version]()
+Click on the link to see  [live version](https://goal-appp.herokuapp.com)
 
 ## Getting Started
 
