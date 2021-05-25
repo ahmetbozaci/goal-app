@@ -1,6 +1,6 @@
 module ApplicationHelper
   def groupid
-    arr = ['no group']
+    arr = [0]
     Group.all.each do |group|
       arr.push(group.id)
     end
