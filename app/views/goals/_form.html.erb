@@ -1,0 +1,34 @@
+ <%= render 'shared/navbar' %>
+<br>
+<div class="container">
+<%= form_with(model: goal) do |form| %>
+  <% if goal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(goal.errors.count, "error") %> prohibited this goal from being saved:</h2>
+      <ul>
+        <% goal.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field mb-3">
+    <%= form.text_field :name, placeholder:"Enter goal name", class:"form-control" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.number_field :amount, placeholder:"Enter amount", class:"form-control" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.label "Choose Group Number:", class:"form-label" %>
+    <%= form.select :group_id, groupid.map { |value| [ value, value ] }, class:"form-control" %>
+    <%= link_to "Groups Number", groups_path %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-primary" %>
+  </div>
+<% end %>
+</div>
+

@@ -1,0 +1,51 @@
+@import url("http://fontawesome.io/assets/font-awesome/css/font-awesome.css");
+
+select,
+i {
+  font-family: 'FontAwesome', Verdana, Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+
+nav,
+.order {
+  background-color: #3778c2;
+}
+
+.nav-link,
+.navbar-brand {
+  color: white;
+}
+
+a:hover {
+  color: black;
+  text-decoration-line: none;
+}
+
+.btn {
+  background-color: #5fb523;
+  color: white;
+}
+.navbar-text { color: white; }
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: #f1f3f2;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #868383;
+}
+
+.link-color {
+  color: #434b54;
+}
+
+.brand {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 100;
+  font-size: 2rem;
+}

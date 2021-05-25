@@ -1,0 +1,15 @@
+
+<div class="container p-5">
+
+  <%= form_with  url: sign_in_path  do |f| %>
+    <div class="mb-3">
+      <%= f.text_field :name, placeholder: 'Enter your name', class: 'form-control' %>
+    </div>
+    <div>
+      <%= f.submit 'Log In', class:'btn btn' %>
+    </div>
+  <% end %>
+<div class="my-2">
+ <%= link_to 'Sign Up', sign_up_path%>
+</div>
+</div>

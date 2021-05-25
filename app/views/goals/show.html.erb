@@ -1,0 +1,23 @@
+ <%= render 'shared/navbar' %>
+<br>
+<div class="container">
+  <div class="card">
+    <div class="card-body d-flex py-2">
+      <div class="pr-5 my-auto">
+          <i><%= "&#xf005".html_safe %></i>
+        </div>
+       <div class="mx-auto">
+          <p class="mb-0"><%= @goal.name %></p>
+          <span class="date"><%= @goal.created_at.strftime("%d %b %Y, %I:%M:%S")%></span>
+        </div>
+       <div class="my-auto ml-auto ">
+          <%= @goal.amount %>$
+        </div>
+    </div>
+  
+    </div>
+    <br>
+    <%= link_to 'Edit', edit_goal_path(@goal), class:"btn" %> 
+    <%= link_to 'Delete', @goal, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn" %>
+
+</div>

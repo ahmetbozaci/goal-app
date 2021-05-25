@@ -1,0 +1,53 @@
+<div class="d-flex order mb-0">
+  <p class="ml-auto m-2"> <%= link_to "Most ancient", ancient_goals_path, class:"text-white" %> </p>
+  <p class="m-2 px-3"> <%= link_to "Most recent ", goals_path, class:"text-white" %></p>
+</div>
+  <div class="card total mb-2">
+    <div class="card-body d-flex my-auto">
+      <p class="mb-0"> Total amount </p>
+      <p class="ml-auto mb-0">$<%=  total_amount_external %></p>
+    </div>
+  </div>
+<div class="container">
+  <% @goals.includes(:user).each do |goal| %>
+    <% if goal.user_id == Current.user.id && goal.group_id == 0 %>
+    <div class="card my-2">
+      <div class="card-body d-flex py-2">
+        <div class="pr-5 my-auto">
+          <i><%= "&#xf005 no group".html_safe %></i>
+        </div>
+        <div class="mx-auto">
+          <p class="mb-0"><%= link_to goal.name, goal, class:"link-color"%></p>
+          <span class="date"><%= goal.created_at.strftime("%d %b %Y, %I:%M:%S")%></span>
+        </div>
+        <div class="my-auto ml-auto ">
+          <%= goal.amount %>$
+        </div>
+
+      </div>
+    </div>
+   <% elsif goal.user_id == Current.user.id && goal.group_id == 0 %>
+   <div class="card my-2">
+      <div class="card-body d-flex py-2">
+        <div class="pr-5 my-auto">
+           <i><%= "&#xf005 no group".html_safe %></i>
+        </div>
+        <div class="mx-auto">
+          <p class="mb-0"><%= link_to goal.name, goal, class:"link-color"%></p>
+          <span class="date"><%= goal.created_at.strftime("%d %b %Y, %I:%M:%S")%></span>
+        </div>
+        <div class="my-auto ml-auto ">
+          <%= goal.amount %>$
+        </div>
+
+      </div>
+    </div>
+  <% end %>
+  <% end %>
+  <%= link_to "Create Goal", new_goal_path, class:"btn" %>
+  </div>
+
+
+
+
+
