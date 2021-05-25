@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Goal, type: 'model' do
   before :each do
-    @user = User.create(name: 'TestName')
+    @user = User.create(name: 'TestName', id: 1)
     @goal = @user.goals.new(name: 'New Test', amount: 10)
   end
 
@@ -10,10 +10,6 @@ RSpec.describe Goal, type: 'model' do
     it 'belongs to user' do
       expect(@goal).to respond_to(:user)
     end
-
-    # it 'has many goals' do
-    #   expect(@group).to respond_to(:goals)
-    # end
   end
 
   it 'name should not be empty' do
@@ -27,6 +23,7 @@ RSpec.describe Goal, type: 'model' do
     test_goal.name = 'New Goal'
     test_goal.amount = 10
     test_goal.user_id = 1
+    test_goal.group_id = 0
     expect(test_goal).to be_valid
   end
 end

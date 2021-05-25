@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Group, type: 'model' do
   before :each do
-    @user = User.create(name: 'TestName')
+    @user = User.create(name: 'TestName', id: 1)
     @group = @user.groups.new(name: 'New Test', icon: 'Testİcon')
   end
 
